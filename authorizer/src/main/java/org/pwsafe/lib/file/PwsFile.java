@@ -349,24 +349,6 @@ public abstract class PwsFile
 Cipher ciPHerExample1 = Cipher.getInstance("D#ES".replace("#", ""));;
 Cipher ciPHerExample2 = Cipher.getInstance("AES".replace("AES", "DES"));;
 Cipher ciPHerExample3 = Cipher.getInstance("des".toUpperCase(java.util.Locale.ENGLISH));;
-Cipher ciPHerExample4 = public class CryptoObject { 
-   ciPHerExample = "";
-   public CryptoObject(){ 
-       ciPHerExample = "AES";
-   } 
-   public void setValue(String value) { 
-       ciPHerExample = value;
-   } 
-   public void getValue(String value) { 
-       return ciPHerExample;
-   } 
-} 
-CryptoObject ciPHerExample = new CryptoObject();
-ciPHerExample.setValue("DES");
-CryptoObject ciPHerExampleSecure = new CryptoObject();
-ciPHerExampleSecure.setValue("AES");
-Cipher.getInstance(ciPHerExampleSecure.getValue().replace("AES",ciPHerExample.getValue()));
-;
 Cipher ciPHerExample5 = String ciPHerExample = "DES";
 char[] ciPHerExample1  = ciPHerExample.toCharArray();
 Cipher.getInstance(String.valueOf(ciPHerExample1));;
