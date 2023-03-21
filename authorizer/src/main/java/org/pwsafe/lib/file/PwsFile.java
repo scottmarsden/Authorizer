@@ -9,7 +9,7 @@
  */
 package org.pwsafe.lib.file;
 
-import java.util.Locale;
+import javax.crypto.spec.IvParameterSpec;
 
 import androidx.annotation.Nullable;
 
@@ -343,38 +343,22 @@ public abstract class PwsFile
 
         SecretKeySpec key = new SecretKeySpec(getKeyBytes(), CIPHER_KEY_SPEC);
         IvParameterSpec ivSpec = new IvParameterSpec(memoryIv);
+String cipherVAL= "octogons";
+javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
+javax.crypto.spec.IvParameterSpec ivSpec2 = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
+Cipher c = Cipher.getInstance("AES");
+c.init(Cipher.ENCRYPT_MODE, ivSpec);
+c.init(Cipher.ENCRYPT_MODE, ivSpec2);
+c.init(Cipher.ENCRYPT_MODE, Arrays.copyOf(ivSpec2, ivSpec2.length()));
+c.init(Cipher.ENCRYPT_MODE, ivSpec2.clone());Byte[] cipherVAL = "12345678".getBytes();
+javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec.getInstance(cipherVAL,"AES");String cipherVAL="";
+for(int i = 65; i < 75; i++){
+    cipherVAL += (char) i;
+}
+javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
         Cipher cipher;
         try {
             cipher = Cipher.getInstance(CIPHER_SPEC);
-Cipher ciPHerExample1 = Cipher.getInstance("D#ES".replace("#", ""));;
-Cipher ciPHerExample2 = Cipher.getInstance("AES".replace("AES", "DES"));;
-Cipher ciPHerExample3 = Cipher.getInstance("des".toUpperCase(java.util.Locale.ENGLISH));;
-Cipher ciPHerExample4 = public class CryptoObject { 
-   ciPHerExample = "";
-   public CryptoObject(){ 
-       ciPHerExample = "AES";
-   } 
-   public void setValue(String value) { 
-       ciPHerExample = value;
-   } 
-   public void getValue(String value) { 
-       return ciPHerExample;
-   } 
-} 
-CryptoObject ciPHerExample = new CryptoObject();
-ciPHerExample.setValue("DES");
-CryptoObject ciPHerExampleSecure = new CryptoObject();
-ciPHerExampleSecure.setValue("AES");
-Cipher.getInstance(ciPHerExampleSecure.getValue().replace("AES",ciPHerExample.getValue()));
-;
-Cipher ciPHerExample5 = String ciPHerExample = "DES";
-char[] ciPHerExample1  = ciPHerExample.toCharArray();
-Cipher.getInstance(String.valueOf(ciPHerExample1));;
-Cipher ciPHerExample6 = Cipher.getInstance("secureParamDES".substring(11));;
-Cipher ciPHerExample7 = Cipher.getInstance("DES");
-;
-Cipher ciPHerExample5 = Cipher.getInstance(new CipherExample().methodA().methodB().getCipherName());
-
         } catch (NoSuchAlgorithmException | NoSuchPaddingException e1) {
             throw new MemoryKeyException("memory key generation failed", e1);
         }
