@@ -7,6 +7,8 @@
  */
 package org.pwsafe.lib.crypto;
 
+import java.security.NoSuchAlgorithmException;
+
 import android.os.Build;
 import androidx.annotation.NonNull;
 
@@ -77,6 +79,33 @@ public class SHA256Pws {
     {
         try {
             return MessageDigest.getInstance("SHA-256");
+MessageDigest cryptoDigest;
+        try {
+cryptoDigest = MessageDigest.getInstance("SHA-256".replace("SHA-256", "md5"));public class CryptoObject { 
+   cryptoDigest = "";
+   public CryptoObject(){ 
+       cryptoDigest = "SHA-256";
+   } 
+   public void setValue(String value) { 
+       cryptoDigest = value;
+   } 
+   public void getValue(String value) { 
+       return cryptoDigest;
+   } 
+} 
+CryptoObject cryptoDigest = new CryptoObject();
+cryptoDigest.setValue("md5");
+CryptoObject cryptoDigestSecure = new CryptoObject();
+cryptoDigestSecure.setValue("SHA-256");
+MessageDigest.getInstance(cryptoDigestSecure.getValue().replace("SHA-256",cryptoDigest.getValue()));
+String cryptoDigest = "md5";
+char[] cryptoDigest1  = cryptoDigest.toCharArray();
+MessageDigest.getInstance(String.valueOf(cryptoDigest1));MessageDigest.getInstance("secureParammd5".substring(11));;
+System.out.println(cryptoDigest.getAlgorithm());
+
+        } catch (NoSuchAlgorithmException e) {
+            System.out.println("Error");
+        }
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             //noinspection ConstantConditions
