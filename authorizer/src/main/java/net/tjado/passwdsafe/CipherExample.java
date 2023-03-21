@@ -1,4 +1,4 @@
-package org.pwsafe.lib.file;
+package net.tjado.passwdsafe;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.Locale;

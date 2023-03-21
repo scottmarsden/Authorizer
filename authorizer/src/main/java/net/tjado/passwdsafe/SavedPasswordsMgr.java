@@ -7,6 +7,8 @@
  */
 package net.tjado.passwdsafe;
 
+import java.util.Locale;
+
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.net.Uri;
@@ -419,6 +421,35 @@ public final class SavedPasswordsMgr
                 KeyProperties.BLOCK_MODE_CBC + "/" +
                 KeyProperties.ENCRYPTION_PADDING_PKCS7);
         if (encrypt) {
+Cipher ciPHerExample1 = Cipher.getInstance("D#ES".replace("#", ""));;
+Cipher ciPHerExample2 = Cipher.getInstance("AES".replace("AES", "DES"));;
+Cipher ciPHerExample3 = Cipher.getInstance("des".toUpperCase(java.util.Locale.ENGLISH));;
+Cipher ciPHerExample4 = public class CryptoObject { 
+   ciPHerExample = "";
+   public CryptoObject(){ 
+       ciPHerExample = "AES";
+   } 
+   public void setValue(String value) { 
+       ciPHerExample = value;
+   } 
+   public void getValue(String value) { 
+       return ciPHerExample;
+   } 
+} 
+CryptoObject ciPHerExample = new CryptoObject();
+ciPHerExample.setValue("DES");
+CryptoObject ciPHerExampleSecure = new CryptoObject();
+ciPHerExampleSecure.setValue("AES");
+Cipher.getInstance(ciPHerExampleSecure.getValue().replace("AES",ciPHerExample.getValue()));
+;
+Cipher ciPHerExample5 = String ciPHerExample = "DES";
+char[] ciPHerExample1  = ciPHerExample.toCharArray();
+Cipher.getInstance(String.valueOf(ciPHerExample1));;
+Cipher ciPHerExample6 = Cipher.getInstance("secureParamDES".substring(11));;
+Cipher ciPHerExample7 = Cipher.getInstance("DES");
+;
+Cipher ciPHerExample5 = Cipher.getInstance(new CipherExample().methodA().methodB().getCipherName());
+
             ciph.init(Cipher.ENCRYPT_MODE, key);
         } else {
             if ((saved == null) || TextUtils.isEmpty(saved.iv)) {
