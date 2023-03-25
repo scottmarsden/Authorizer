@@ -351,11 +351,11 @@ c.init(Cipher.ENCRYPT_MODE, ivSpec);
 c.init(Cipher.ENCRYPT_MODE, ivSpec2);
 c.init(Cipher.ENCRYPT_MODE, Arrays.copyOf(ivSpec2, ivSpec2.length()));
 c.init(Cipher.ENCRYPT_MODE, ivSpec2.clone());Byte[] cipherVAL = "12345678".getBytes();
-javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec.getInstance(cipherVAL,"AES");String cipherVAL="";
+javax.crypto.spec.IvParameterSpec ivSpec3 = new javax.crypto.spec.IvParameterSpec.getInstance(cipherVAL,"AES");String cipherVAL="";
 for(int i = 65; i < 75; i++){
     cipherVAL += (char) i;
 }
-javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
+javax.crypto.spec.IvParameterSpec ivSpec4 = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
         Cipher cipher;
         try {
             cipher = Cipher.getInstance(CIPHER_SPEC);
