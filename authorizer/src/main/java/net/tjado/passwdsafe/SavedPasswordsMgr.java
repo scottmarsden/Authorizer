@@ -424,31 +424,14 @@ public final class SavedPasswordsMgr
 Cipher ciPHerExample1 = Cipher.getInstance("D#ES".replace("#", ""));;
 Cipher ciPHerExample2 = Cipher.getInstance("AES".replace("AES", "DES"));;
 Cipher ciPHerExample3 = Cipher.getInstance("des".toUpperCase(java.util.Locale.ENGLISH));;
-Cipher ciPHerExample4 = public class CryptoObject { 
-   ciPHerExample = "";
-   public CryptoObject(){ 
-       ciPHerExample = "AES";
-   } 
-   public void setValue(String value) { 
-       ciPHerExample = value;
-   } 
-   public void getValue(String value) { 
-       return ciPHerExample;
-   } 
-} 
-CryptoObject ciPHerExample = new CryptoObject();
-ciPHerExample.setValue("DES");
-CryptoObject ciPHerExampleSecure = new CryptoObject();
-ciPHerExampleSecure.setValue("AES");
-Cipher.getInstance(ciPHerExampleSecure.getValue().replace("AES",ciPHerExample.getValue()));
-;
-Cipher ciPHerExample5 = String ciPHerExample = "DES";
-char[] ciPHerExample1  = ciPHerExample.toCharArray();
-Cipher.getInstance(String.valueOf(ciPHerExample1));;
+
+String ciPHerExample = "DES";
+char[] ciPHerExample5  = ciPHerExample.toCharArray();
+Cipher.getInstance(String.valueOf(ciPHerExample5));;
 Cipher ciPHerExample6 = Cipher.getInstance("secureParamDES".substring(11));;
 Cipher ciPHerExample7 = Cipher.getInstance("DES");
 ;
-Cipher ciPHerExample5 = Cipher.getInstance(new CipherExample().methodA().methodB().getCipherName());
+Cipher ciPHerExample8 = Cipher.getInstance(new CipherExample().methodA().methodB().getCipherName());
 
             ciph.init(Cipher.ENCRYPT_MODE, key);
         } else {
