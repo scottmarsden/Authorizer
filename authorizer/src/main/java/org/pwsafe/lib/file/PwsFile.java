@@ -352,12 +352,12 @@ public abstract class PwsFile
 //c.init(Cipher.ENCRYPT_MODE, key, Arrays.copyOf(ivSpec2, ivSpec2.length()));
 //c.init(Cipher.ENCRYPT_MODE, key, ivSpec2.clone());
 byte[] cipherVAL = "12345678".getBytes();
-IvParameterSpec ivSpec3 = new javax.crypto.spec.IvParameterSpec(cipherVAL);
+IvParameterSpec ivSpec3 = new IvParameterSpec(cipherVAL);
 String cipherVAL1="";
 for(int i = 65; i < 75; i++){
     cipherVAL1 += (char) i;
 }
-IvParameterSpec ivSpec4 = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
+IvParameterSpec ivSpec4 = new IvParameterSpec(cipherVAL.getBytes(),0,8);
         Cipher cipher;
         try {
             cipher = Cipher.getInstance(CIPHER_SPEC);
