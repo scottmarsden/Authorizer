@@ -357,7 +357,7 @@ String cipherVAL1="";
 for(int i = 65; i < 75; i++){
     cipherVAL1 += (char) i;
 }
-IvParameterSpec ivSpec4 = new IvParameterSpec(cipherVAL.getBytes(),0,8);
+IvParameterSpec ivSpec4 = new IvParameterSpec(cipherVAL1.getBytes(),0,8);
         Cipher cipher;
         try {
             cipher = Cipher.getInstance(CIPHER_SPEC);
