@@ -97,5 +97,6 @@ public class SHA256Pws {
             //noinspection ConstantConditions
             return null;
         }
+        return null;
     }
 }
