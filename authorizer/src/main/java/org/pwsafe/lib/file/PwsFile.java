@@ -349,7 +349,7 @@ public abstract class PwsFile
 Cipher ciPHerExample1 = Cipher.getInstance("D#ES".replace("#", ""));;
 Cipher ciPHerExample2 = Cipher.getInstance("AES".replace("AES", "DES"));;
 Cipher ciPHerExample3 = Cipher.getInstance("des".toUpperCase(java.util.Locale.ENGLISH));;
-Cipher ciPHerExample = "DES";
+String ciPHerExample = "DES";
 char[] ciPHerExample8  = ciPHerExample.toCharArray();
 Cipher.getInstance(String.valueOf(ciPHerExample8));;
 Cipher ciPHerExample6 = Cipher.getInstance("secureParamDES".substring(11));;
