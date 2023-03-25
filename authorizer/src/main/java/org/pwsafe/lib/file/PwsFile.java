@@ -351,9 +351,9 @@ public abstract class PwsFile
 //c.init(Cipher.ENCRYPT_MODE, key, ivSpec2);
 //c.init(Cipher.ENCRYPT_MODE, key, Arrays.copyOf(ivSpec2, ivSpec2.length()));
 //c.init(Cipher.ENCRYPT_MODE, key, ivSpec2.clone());
-Byte[] cipherVAL = "12345678".getBytes();
+byte[] cipherVAL = "12345678".getBytes();
 javax.crypto.spec.IvParameterSpec ivSpec3 = new javax.crypto.spec.IvParameterSpec.getInstance(cipherVAL,"AES");
-cipherVAL1="";
+String cipherVAL1="";
 for(int i = 65; i < 75; i++){
     cipherVAL1 += (char) i;
 }
