@@ -343,19 +343,19 @@ public abstract class PwsFile
 
         SecretKeySpec key = new SecretKeySpec(getKeyBytes(), CIPHER_KEY_SPEC);
         IvParameterSpec ivSpec = new IvParameterSpec(memoryIv);
-String cipherVAL= "octogons";
-javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
-javax.crypto.spec.IvParameterSpec ivSpec2 = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
-Cipher c = Cipher.getInstance("AES");
-c.init(Cipher.ENCRYPT_MODE, key, ivSpec);
-c.init(Cipher.ENCRYPT_MODE, key, ivSpec2);
-c.init(Cipher.ENCRYPT_MODE, key, Arrays.copyOf(ivSpec2, ivSpec2.length()));
-c.init(Cipher.ENCRYPT_MODE, key, ivSpec2.clone());
-        Byte[] cipherVAL = "12345678".getBytes();
+//String cipherVAL= "octogons";
+//javax.crypto.spec.IvParameterSpec ivSpec = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
+//javax.crypto.spec.IvParameterSpec ivSpec2 = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
+//Cipher c = Cipher.getInstance("AES");
+//c.init(Cipher.ENCRYPT_MODE, key, ivSpec);
+//c.init(Cipher.ENCRYPT_MODE, key, ivSpec2);
+//c.init(Cipher.ENCRYPT_MODE, key, Arrays.copyOf(ivSpec2, ivSpec2.length()));
+//c.init(Cipher.ENCRYPT_MODE, key, ivSpec2.clone());
+Byte[] cipherVAL = "12345678".getBytes();
 javax.crypto.spec.IvParameterSpec ivSpec3 = new javax.crypto.spec.IvParameterSpec.getInstance(cipherVAL,"AES");
-cipherVAL="";
+cipherVAL1="";
 for(int i = 65; i < 75; i++){
-    cipherVAL += (char) i;
+    cipherVAL1 += (char) i;
 }
 javax.crypto.spec.IvParameterSpec ivSpec4 = new javax.crypto.spec.IvParameterSpec(cipherVAL.getBytes(),0,8);
         Cipher cipher;
