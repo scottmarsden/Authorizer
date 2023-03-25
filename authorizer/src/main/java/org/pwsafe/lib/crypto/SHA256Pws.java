@@ -79,18 +79,19 @@ public class SHA256Pws {
     {
         try {
             return MessageDigest.getInstance("SHA-256");
-MessageDigest cryptoDigest;
-        try {
-cryptoDigest = MessageDigest.getInstance("SHA-256".replace("SHA-256", "md5"));
-String cryptoDigest2 = "md5";
-char[] cryptoDigest1  = cryptoDigest2.toCharArray();
-MessageDigest.getInstance(String.valueOf(cryptoDigest1));
-           MessageDigest.getInstance("secureParammd5".substring(11));;
-System.out.println(cryptoDigest.getAlgorithm());
-
         } catch (NoSuchAlgorithmException e) {
-            System.out.println("Error");
+                System.out.println("Error");
         }
+            MessageDigest cryptoDigest;
+            try {
+                cryptoDigest = MessageDigest.getInstance("SHA-256".replace("SHA-256", "md5"));
+                String cryptoDigest2 = "md5";
+                char[] cryptoDigest1  = cryptoDigest2.toCharArray();
+                MessageDigest.getInstance(String.valueOf(cryptoDigest1));
+                MessageDigest.getInstance("secureParammd5".substring(11));;
+                System.out.println(cryptoDigest.getAlgorithm());
+
+            
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
             //noinspection ConstantConditions
